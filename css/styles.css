@@ -7,6 +7,9 @@
      #790cc7
      #9c12ff
    
+     #f73b48
+     #f55661
+   
    - note:
      if you're reading this, hi!
      11/25/2019
@@ -33,8 +36,8 @@ h2 { color: white; font-size: 4rem; padding-bottom: 2rem; margin: 0.75rem 0 3rem
 
 li { color: white; font-size: 2rem }
 
-a { color: #790cc7; }
+a { color: #f73b48; }
 
-a:visited { color: #790cc7; }
+a:visited { color: #f73b48; }
 
-a:hover { color: #9c12ff; }
+a:hover { color: #f55661; }
