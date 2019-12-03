@@ -15,29 +15,22 @@
      11/25/2019
 */
 
-/* head */
 body {
-  background-color: #28283e; 
+  background-color: #28283e;
   font-family: "Roboto Mono", sans-serif; line-height: 1; 
   padding: 3rem 5rem; 
   font-size: 2rem;
 }
 
+/* class */
+.info { color: white; font-size: 2rem; margin: 1rem 0 1rem 0; }
+
 /* such text, much wow */
 ul { list-style: none; }
-
 p { color: white; font-size: 2.75rem; margin: 2.5rem 0 1rem 0;}
-
-pbody { color: white; font-size: 2rem; margin: 1rem 0 1rem 0; }
-
 h1 { color: white; font-size: 6rem; padding: 1rem 0; margin: 1rem 0; }
-
 h2 { color: white; font-size: 4rem; padding-bottom: 2rem; margin: 0.75rem 0 3rem; }
-
 li { color: white; font-size: 2rem }
-
 a { color: #f73b48; }
-
 a:visited { color: #f73b48; }
-
 a:hover { color: #f55661; }

@@ -1,0 +1,36 @@
+/*
+   colors!
+
+   - note:
+     fancy...
+     12/3/2019
+*/
+
+body {
+  background-color: rgb(var(--bg-red), var(--bg-grn), var(--bg-blu));
+}
+
+/* vars */
+:root {
+  --bg-red: 0;
+  --bg-grn: 0;
+  --bg-blu: 0;
+}
+
+/* class */
+.red { color: tomato; }
+.grn { color: greenyellow; }
+.blu { color: dodgerblue; }
+.center {
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.colorval {
+  font-family: "Roboto Mono", sans-serif;
+  line-height: 1;
+  font-size: 4rem;
+}
