@@ -1,16 +1,7 @@
-/* code */
+/* rainbow effect */
 let root = document.documentElement;
 let rgb = [[rand(), randBool()], [rand(), randBool()], [rand(), randBool()]];
 setInterval(changeColor, 10);
-
-/* function */
-function rand() {
-  return Math.floor(Math.random() * 256);
-}
-
-function randBool() {
-  return Math.floor(Math.random() * 2);
-}
 
 function changeColor() {
   rgb.forEach((value, i, arr) => {
@@ -35,4 +26,50 @@ function changeColor() {
   document.getElementById("red").innerHTML = rgb[0][0];
   document.getElementById("grn").innerHTML = rgb[1][0];
   document.getElementById("blu").innerHTML = rgb[2][0];
+}
+
+/* DVD effect */
+const WIDTH = Math.floor(window.innerWidth / 3);
+const HEIGHT = Math.floor(window.innerHeight / 3);
+let xOffset = 0;
+let xVelocity = randVelocity();
+let tOffset = 1;
+let yVelocity = randVelocity();
+setInterval(dvdLoop, 20);
+
+function dvdLoop() {
+  xOffset = xOffset + xVelocity;
+  tOffset = tOffset + yVelocity;
+
+  if (xOffset > WIDTH) {
+    xVelocity = -randVelocity();
+    xOffset = WIDTH;
+  } else if (xOffset < -WIDTH) {
+    xVelocity = randVelocity();
+    xOffset = -WIDTH;
+  }
+
+  if (tOffset > HEIGHT) {
+    yVelocity = -randVelocity();
+    tOffset = HEIGHT;
+  } else if (tOffset < -HEIGHT) {
+    yVelocity = randVelocity();
+    tOffset = -HEIGHT;
+  }
+
+  root.style.setProperty('--x-offset', xOffset);
+  root.style.setProperty('--y-offset', tOffset);
+}
+
+/* helper methods */
+function rand() {
+  return Math.floor(Math.random() * 256);
+}
+
+function randBool() {
+  return Math.floor(Math.random() * 2);
+}
+
+function randVelocity() {
+  return (Math.floor(Math.random() * 4) + 1) * randBool() ? 1 : 2;
 }
