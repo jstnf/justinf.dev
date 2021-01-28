@@ -25,6 +25,11 @@ body {
 /* class */
 .info { color: white; font-size: 2rem; margin: 1rem 0 1rem 0; }
 
+/* pandiwa */
+.textfield { color: #28283e; font-family: "Roboto Mono"; font-size: 2rem; margin: 1rem 0 1rem 0; }
+.resultfield { color: #28283e; font-family: "Roboto Mono"; font-size: 1.5rem; margin: 1rem 0 1rem 0; }
+.typeradio { color: white; font-family: "Roboto Mono"; font-size: 2rem; margin: 1rem 0 1rem 0; }
+
 /* such text, much wow */
 ul { list-style: none; }
 p { color: white; font-size: 2.75rem; margin: 2.5rem 0 1rem 0;}
