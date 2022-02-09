@@ -13,6 +13,11 @@
    - note:
      if you're reading this, hi!
      11/25/2019
+
+   - note:
+     use decimals (not percentages) for opacity!
+     percentages are not supported.
+     https://stackoverflow.com/questions/58853844/the-opacity-value-was-changed-to-1-after-building-the-reacjs-project
 */
 
 body {
@@ -172,14 +177,14 @@ body {
 }
 
 .footer-icon {
-  opacity: 35%;
+  opacity: 0.3;
   margin-left: 10px;
   margin-right: 10px;
   -webkit-transition: opacity 500ms;
 }
 
 .footer-icon:hover {
-  opacity: 100%;
+  opacity: 1;
   -webkit-transition: opacity 250ms;
 }
 
