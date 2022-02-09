@@ -17,6 +17,199 @@
 
 body {
   background-color: #28283e;
+}
+
+/* ----- HEADER ----- */
+.header {
+  background-image: url("../assets/background.jpg");
+  box-shadow: inset 0 0 0 2000px rgba(10, 10, 10, 0.7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Montserrat";
+  text-align: center;
+  height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fallin {
+  opacity: 0;
+  animation: new-item-animation 500ms linear forwards;
+  animation-delay: 500ms;
+}
+
+@keyframes new-item-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform : translateY(0);
+  }
+}
+
+.header-image-container {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header-image-container img {
+  border: 0.3rem solid whitesmoke;
+  border-radius: 50%;
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+.header-name {
+  color: whitesmoke;
+  margin-bottom: 0;
+}
+
+.header-subname {
+  color: whitesmoke;
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+/* ----- HEADER ----- */
+
+/* ----- NAVBAR ----- */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #222222;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Montserrat";
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar-item {
+  color: whitesmoke;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  -webkit-transition: all 0.1s;
+}
+
+.navbar-item:hover {
+  font-size: 1.2rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  -webkit-transition: all 0.1s;
+}
+/* ----- NAVBAR ----- */
+
+/* ----- BODY ----- */
+.tempbody {
+  background-color: whitesmoke;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+}
+
+.tempbody-title {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.tempbody-subtitle {
+  font-size: 1.25rem;
+  margin-top: 0.45rem;
+  margin-bottom: 0;
+  text-align: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+/* ----- BODY ----- */
+
+/* ----- FOOTER ----- */
+.footer {
+  background-color: #28283e;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+.footer h2 {
+  color: whitesmoke;
+  margin-bottom: 0;
+}
+
+.footer p {
+  color: whitesmoke;
+  margin-top: 0;
+}
+
+.footer-icons-container {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-icon {
+  opacity: 30%;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-transition: opacity 500ms;
+}
+
+.footer-icon:hover {
+  opacity: 100%;
+  -webkit-transition: opacity 250ms;
+}
+
+.footer-icon img {
+  max-height: 2.5rem;
+  max-width: 2.5rem;
+}
+
+.footer-contact-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-divider {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: whitesmoke;
+}
+
+.footer-contact {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* ----- FOOTER ----- */
+
+/* legacy (old pages) below */
+.legacy {
+  background-color: #28283e;
   font-family: "Roboto Mono", sans-serif; line-height: 1; 
   padding: 3rem 5rem; 
   font-size: 2rem;
@@ -31,11 +224,11 @@ body {
 .typeradio { color: white; font-family: "Roboto Mono"; font-size: 2rem; margin: 1rem 0 1rem 0; }
 
 /* such text, much wow */
-ul { list-style: none; }
-p { color: white; font-size: 2.75rem; margin: 2.5rem 0 1rem 0;}
-h1 { color: white; font-size: 6rem; padding: 1rem 0; margin: 1rem 0; }
-h2 { color: white; font-size: 3.5rem; padding-bottom: 2rem; margin: 0.75rem 0 3rem; }
-li { color: white; font-size: 2rem }
-a { color: #f73b48; }
-a:visited { color: #f73b48; }
-a:hover { color: #f55661; }
+.legacy ul { list-style: none; }
+.legacy p { color: white; font-size: 2.75rem; margin: 2.5rem 0 1rem 0;}
+.legacy h1 { color: white; font-size: 6rem; padding: 1rem 0; margin: 1rem 0; }
+.legacy h2 { color: white; font-size: 3.5rem; padding-bottom: 2rem; margin: 0.75rem 0 3rem; }
+.legacy li { color: white; font-size: 2rem }
+.legacy a { color: #f73b48; }
+.legacy a:visited { color: #f73b48; }
+.legacy a:hover { color: #f55661; }

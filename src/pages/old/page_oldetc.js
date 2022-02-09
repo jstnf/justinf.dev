@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class PageOldEtc extends React.Component {
   render() {
     return (
-      <div>
+      <div class="legacy">
         <h1>etc</h1>
         <p>tabs or spaces?</p>
         <p class="info">spaces.</p>
@@ -16,7 +16,7 @@ class PageOldEtc extends React.Component {
           <i>there is nothing here yet...</i>
         </p>
 
-        <p><Link to='/'>index</Link></p>
+        <p><Link to='/old'>index</Link></p>
       </div>
     );
   }
