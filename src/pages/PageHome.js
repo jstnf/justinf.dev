@@ -7,6 +7,8 @@ import ProjectsComponent from '../components/component_projects';
 import ExperienceComponent from '../components/component_experience';
 import Footer from '../components/component_footer';
 
+import Card from '../scripts/card';
+
 class PageHome extends React.Component {
   render() {
     return (
@@ -16,6 +18,7 @@ class PageHome extends React.Component {
         <RandomExperience />
         <ProjectsComponent />
         <ExperienceComponent />
+        <Card title="Hello world" content="Hi there!" tags={[]} />
         <Footer />
       </>
     );
