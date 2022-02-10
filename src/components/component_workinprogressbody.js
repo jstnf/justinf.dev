@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class TempBodyComponent extends React.Component {
+class WorkInProgressComponent extends React.Component {
   render() {
     return (
       <div class="tempbody">
@@ -13,4 +13,4 @@ class TempBodyComponent extends React.Component {
   }
 }
 
-export default TempBodyComponent;
+export default WorkInProgressComponent;

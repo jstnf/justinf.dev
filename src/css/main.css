@@ -141,6 +141,15 @@ body {
   padding-bottom: 0rem;
   -webkit-transition: all 0.1s;
 }
+
+.navbar-item a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.navbar-item a:hover {
+  color: #999999;
+}
 /* ----- NAVBAR ----- */
 
 /* ----- BODY ----- */
@@ -172,6 +181,51 @@ body {
   margin-right: 10vw;
 }
 /* ----- BODY ----- */
+
+/* ----- RANDOM EXPERIENCE ----- */
+.random-experience-container {
+  background-color: whitesmoke;
+  min-height: 50vh;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+}
+/* ----- RANDOM EXPERIENCE ----- */
+
+/* ----- PROJECTS ----- */
+.projects-container {
+  background-color: #888;
+  min-height: 50vh;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+}
+/* ----- PROJECTS ----- */
+
+/* ----- EXPERIENCE ----- */
+.experience-container {
+  background-color: whitesmoke;
+  min-height: 50vh;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+}
+/* ----- EXPERIENCE ----- */
 
 /* ----- FOOTER ----- */
 .footer {

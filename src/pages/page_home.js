@@ -2,9 +2,10 @@ import React from 'react';
 
 import Header from '../components/component_header';
 import NavbarComponent from '../components/component_navbar';
+import RandomExperience from '../components/component_randomexperience';
+import ProjectsComponent from '../components/component_projects';
+import ExperienceComponent from '../components/component_experience';
 import Footer from '../components/component_footer';
-
-import TempBodyComponent from '../components/component_tempbody';
 
 class PageHome extends React.Component {
   render() {
@@ -12,7 +13,9 @@ class PageHome extends React.Component {
       <>
         <Header />
         <NavbarComponent />
-        <TempBodyComponent />
+        <RandomExperience />
+        <ProjectsComponent />
+        <ExperienceComponent />
         <Footer />
       </>
     );

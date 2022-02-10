@@ -9,7 +9,7 @@ import youtube from "../assets/youtube.png";
 class Footer extends React.Component {
   render() {
     return (
-      <div class="footer">
+      <div class="footer" id="footer">
         <h2>Questions?</h2>
         <p>Here's how to reach me!</p>
         <div class="footer-icons-container">
