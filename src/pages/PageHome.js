@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Header from '../components/component_header';
-import NavbarComponent from '../components/component_navbar';
-import RandomExperience from '../components/component_randomexperience';
-import ProjectsComponent from '../components/component_projects';
-import ExperienceComponent from '../components/component_experience';
-import Footer from '../components/component_footer';
+import Header from '../components/Header';
+import NavbarComponent from '../components/NavbarComponent';
+import RandomExperience from '../components/RandomExperience';
+import ProjectsComponent from '../components/ProjectsComponent';
+import ExperienceComponent from '../components/ExperienceComponent';
+import Footer from '../components/Footer';
 
-import Card from '../scripts/card';
+import Card from '../scripts/Card';
 
 class PageHome extends React.Component {
   render() {
