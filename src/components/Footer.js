@@ -9,46 +9,46 @@ import youtube from "../assets/youtube.png";
 class Footer extends React.Component {
   render() {
     return (
-      <div class="footer" id="contact">
+      <div className="footer" id="contact">
         <h2>Questions?</h2>
         <p>Here's how to reach me!</p>
-        <div class="footer-icons-container">
-          <div class="footer-icon" id="footer-icon-linkedin">
-            <a href="https://linkedin.com/in/jstnf" target="_blank">
-              <img src={linkedin}/>
+        <div className="footer-icons-container">
+          <div className="footer-icon" id="footer-icon-linkedin">
+            <a href="https://linkedin.com/in/jstnf" target="_blank" rel="noreferrer">
+              <img src={linkedin} alt="LinkedIn"/>
             </a>
           </div>
-          <div class="footer-icon" id="footer-icon-twitter">
-            <a href="https://twitter.com/jstnfdev" target="_blank">
-              <img src={twitter}/>
+          <div className="footer-icon" id="footer-icon-twitter">
+            <a href="https://twitter.com/jstnfdev" target="_blank" rel="noreferrer">
+              <img src={twitter} alt="Twitter"/>
             </a>
           </div>
-          <div class="footer-icon" id="footer-icon-github">
-            <a href="https://github.com/jstnf" target="_blank">
-              <img src={github}/>
+          <div className="footer-icon" id="footer-icon-github">
+            <a href="https://github.com/jstnf" target="_blank" rel="noreferrer">
+              <img src={github} alt="GitHub"/>
             </a>
           </div>
-          <div class="footer-icon" id="footer-icon-instagram">
-            <a href="https://instagram.com/jstnf" target="_blank">
-              <img src={instagram}/>
+          <div className="footer-icon" id="footer-icon-instagram">
+            <a href="https://instagram.com/jstnf" target="_blank" rel="noreferrer">
+              <img src={instagram} alt="Instagram"/>
             </a>
           </div>
-          <div class="footer-icon" id="footer-icon-youtube">
-            <a href="https://youtube.com/jstnf" target="_blank">
-              <img src={youtube}/>
+          <div className="footer-icon" id="footer-icon-youtube">
+            <a href="https://youtube.com/jstnf" target="_blank" rel="noreferrer">
+              <img src={youtube} alt="YouTube"/>
             </a>
           </div>
         </div>
-        <div class="footer-contact-container">
-          <div class="footer-contact">
+        <div className="footer-contact-container">
+          <div className="footer-contact">
             <p>email: justinbfigueroa@gmail.com</p>
           </div>
-          <div class="footer-divider">|</div>
-          <div class="footer-contact">
+          <div className="footer-divider">|</div>
+          <div className="footer-contact">
             <p>phone: (email me)</p>
           </div>
-          <div class="footer-divider">|</div>
-          <div class="footer-contact">
+          <div className="footer-divider">|</div>
+          <div className="footer-contact">
             <p>discord: jstnf#2626</p>
           </div>
         </div>

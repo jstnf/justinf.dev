@@ -102,6 +102,19 @@ body {
   margin-bottom: 0;
 }
 
+.header-name #jp {
+  display: none;
+  font-size: 0.8em;
+}
+
+.header-name:hover #en {
+  display: none;
+}
+
+.header-name:hover #jp {
+  display: inline;
+}
+
 .header-subname {
   color: whitesmoke;
   margin-top: 0;
@@ -131,7 +144,8 @@ body {
   padding-right: 10px;
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
-  -webkit-transition: all 0.1s;
+  -webkit-transition: all 100ms;
+  transition: 100m;
 }
 
 .navbar-item:hover {
@@ -139,7 +153,8 @@ body {
   font-size: 1.2rem;
   padding-top: 0rem;
   padding-bottom: 0rem;
-  -webkit-transition: all 0.1s;
+  -webkit-transition: all 100ms;
+  transition: 100ms;
 }
 
 .navbar-item a {
@@ -259,11 +274,13 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   -webkit-transition: opacity 500ms;
+  transition: 500ms;
 }
 
 .footer-icon:hover {
   opacity: 1;
   -webkit-transition: opacity 250ms;
+  transition: 250ms;
 }
 
 .footer-icon img {

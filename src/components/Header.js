@@ -3,34 +3,28 @@ import React from 'react';
 // https://github.com/lamyfarai/react-typing-effect
 import ReactTypingEffect from 'react-typing-effect';
 
+import subtitles from "../assets/subtitles.json";
 import headshot from "../assets/headshot.jpg";
 
 class Header extends React.Component {
   render() {
     return (
-      <div class="header">
-        <div class="fallin">
-          <div class="header-image-container">
-            <img src={headshot}></img>
+      <div className="header">
+        <div className="fallin">
+          <div className="header-image-container">
+            <img src={headshot} alt=""></img>
           </div>
-          <h1 class="header-name">Justin Figueroa</h1>
+          <h1 className="header-name"><span id="en">Justin Figueroa</span><span id="jp">フィゲロア・ジャスティン</span></h1>
           <ReactTypingEffect
-            text={
-              [
-                "Computer Science @ UCR", 
-                "Course Reader @ UCR",
-                "a.k.a jstnf",
-                "Developer @ Ataraxia",
-                "Developer @ Omega Network"
-              ]}
-            cursorRenderer={cursor => <p class="header-subname">{cursor}</p>}
+            text={subtitles.data}
+            cursorRenderer={cursor => <p className="header-subname">{cursor}</p>}
             speed={75}
             eraseSpeed={50}
             typingDelay={1500}
             eraseDelay={4000}
             displayTextRenderer={(text, i) => {
               return (
-                <p class="header-subname">
+                <p className="header-subname">
                   {text.split('').map((char, i) => {
                     const key = `${i}`;
                     return (
