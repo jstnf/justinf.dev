@@ -135,6 +135,8 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
+  z-index: 100;
 }
 
 .navbar-item {
@@ -201,14 +203,37 @@ body {
 .random-experience-container {
   background-color: whitesmoke;
   min-height: 50vh;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Montserrat";
+}
+
+.random-experience-title {
+  margin: 0;
+}
+
+.random-experience-subtitle {
+  margin-top: 0.5rem;
+}
+
+.random-button {
+  margin-top: 2rem;
+  background-color: whitesmoke;
+  border-radius: 2rem;
+  border-color: #28283e;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  transition: 500ms;
+}
+
+.random-button:hover {
+  color: whitesmoke;
+  background-color: #4f4f6d;
 }
 /* ----- RANDOM EXPERIENCE ----- */
 
