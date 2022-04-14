@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Page from './scripts/Page';
+import Page from './scripts/page';
 import PageHome from './pages/PageHome';
 import PageOldHome from './pages/old/PageOldHome';
 import PageOldEtc from './pages/old/PageOldEtc';
