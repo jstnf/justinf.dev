@@ -1,6 +1,7 @@
 import React from 'react';
 import data from "../assets/randomexperience.json";
 import "../css/cards.css";
+import RandomExperienceCard from './RandomExperienceCard';
 
 export const RandomExperience = () => {
   const [postIndices, setPostIndices] = React.useState([0, 1, 2, 3, 4]);
@@ -24,16 +25,11 @@ export const RandomExperience = () => {
 
       <div className="cards">
         {postIndices.map((num) => {
-          return (
-            <div className="card">
-              <h2>{data.posts[num].title}</h2>
-              <p>{data.posts[num].content}</p>
-            </div>
-          );
+          return <RandomExperienceCard post={data.posts[num]} />
         })}
       </div>
 
-      <button className="random-button" onClick={randomizePostIndices}>Randomize</button>
+      <button className="random-button" onClick={randomizePostIndices}>Show Me More...</button>
     </div>
   );
 }
