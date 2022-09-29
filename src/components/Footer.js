@@ -21,13 +21,23 @@ export const Footer = () => {
       </div>
       <div className="footer-contact-container">
         <div className="footer-contact">
-          <p><strong>email:</strong> {footer_data["email"]}</p>
+          <p><strong>email:</strong> {data["email"]}</p>
         </div>
         <div className="footer-divider">|</div>
         <div className="footer-contact">
-          <p><strong>discord:</strong> {footer_data["discord"]}</p>
+          <p><strong>discord:</strong> {data["discord"]}</p>
         </div>
       </div>
+    </div>
+  );
+}
+
+const FooterIcon = (props) => {
+  return (
+    <div className="footer-icon" id={"footer-icon-" + props.id}>
+      <a href={data[props.id].url} target="_blank" rel="noreferrer">
+        <img src={props.img} alt={props.alt}/>
+      </a>
     </div>
   );
 }
