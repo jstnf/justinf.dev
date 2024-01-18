@@ -49,7 +49,7 @@ body {
 
 /* ----- HEADER ----- */
 .header {
-  background-image: url("../assets/background.jpg");
+  background-image: url("../assets/header/background.jpg");
   box-shadow: inset 0 0 0 2000px rgba(10, 10, 10, 0.7);
   background-repeat: no-repeat;
   background-size: cover;
@@ -239,7 +239,7 @@ body {
 
 /* ----- PROJECTS ----- */
 .projects-container {
-  background-color: #888;
+  background-color: #333;
   min-height: 50vh;
   padding-top: 1rem;
   padding-bottom: 1rem;
