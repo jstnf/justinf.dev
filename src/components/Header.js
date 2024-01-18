@@ -3,8 +3,8 @@ import React from 'react';
 // https://github.com/lamyfarai/react-typing-effect
 import ReactTypingEffect from 'react-typing-effect';
 
-import subtitles from "../assets/subtitles.json";
-import headshot from "../assets/headshot.jpg";
+import subtitles from "../assets/header/subtitles.json";
+import headshot from "../assets/header/headshot.jpg";
 
 class Header extends React.Component {
   render() {

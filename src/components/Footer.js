@@ -1,60 +1,45 @@
 import React from 'react';
 
-import linkedin from "../assets/linkedin.png";
-import twitter from "../assets/twitter.png";
-import github from "../assets/github.png";
-import instagram from "../assets/instagram.png";
-import youtube from "../assets/youtube.png";
+import data from "../assets/footer/data.json";
+import linkedin from "../assets/footer/linkedin.png";
+import twitter from "../assets/footer/twitter.png";
+import github from "../assets/footer/github.png";
+import instagram from "../assets/footer/instagram.png";
+import youtube from "../assets/footer/youtube.png";
 
-class Footer extends React.Component {
-  render() {
-    return (
-      <div className="footer" id="contact">
-        <h2>Questions?</h2>
-        <p>Here's how to reach me!</p>
-        <div className="footer-icons-container">
-          <div className="footer-icon" id="footer-icon-linkedin">
-            <a href="https://linkedin.com/in/jstnf" target="_blank" rel="noreferrer">
-              <img src={linkedin} alt="LinkedIn"/>
-            </a>
-          </div>
-          <div className="footer-icon" id="footer-icon-twitter">
-            <a href="https://twitter.com/jstnfdev" target="_blank" rel="noreferrer">
-              <img src={twitter} alt="Twitter"/>
-            </a>
-          </div>
-          <div className="footer-icon" id="footer-icon-github">
-            <a href="https://github.com/jstnf" target="_blank" rel="noreferrer">
-              <img src={github} alt="GitHub"/>
-            </a>
-          </div>
-          <div className="footer-icon" id="footer-icon-instagram">
-            <a href="https://instagram.com/jstnf" target="_blank" rel="noreferrer">
-              <img src={instagram} alt="Instagram"/>
-            </a>
-          </div>
-          <div className="footer-icon" id="footer-icon-youtube">
-            <a href="https://youtube.com/jstnf" target="_blank" rel="noreferrer">
-              <img src={youtube} alt="YouTube"/>
-            </a>
-          </div>
+export const Footer = () => {
+  return (
+    <div className="footer" id="contact">
+      <h2>Questions?</h2>
+      <p>Here's how to reach me!</p>
+      <div className="footer-icons-container">
+        <FooterIcon id="linkedin" img={linkedin} alt="LinkedIn" />
+        <FooterIcon id="twitter" img={twitter} alt="Twitter" />
+        <FooterIcon id="github" img={github} alt="GitHub" />
+        <FooterIcon id="instagram" img={instagram} alt="Instagram" />
+        <FooterIcon id="youtube" img={youtube} alt="YouTube" />
+      </div>
+      <div className="footer-contact-container">
+        <div className="footer-contact">
+          <p><strong>email:</strong> {data["email"]}</p>
         </div>
-        <div className="footer-contact-container">
-          <div className="footer-contact">
-            <p>email: justinbfigueroa@gmail.com</p>
-          </div>
-          <div className="footer-divider">|</div>
-          <div className="footer-contact">
-            <p>phone: (email me)</p>
-          </div>
-          <div className="footer-divider">|</div>
-          <div className="footer-contact">
-            <p>discord: jstnf#2626</p>
-          </div>
+        <div className="footer-divider">|</div>
+        <div className="footer-contact">
+          <p><strong>discord:</strong> {data["discord"]}</p>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
+
+const FooterIcon = (props) => {
+  return (
+    <div className="footer-icon" id={"footer-icon-" + props.id}>
+      <a href={data[props.id].url} target="_blank" rel="noreferrer">
+        <img src={props.img} alt={props.alt}/>
+      </a>
+    </div>
+  );
 }
 
 export default Footer;
