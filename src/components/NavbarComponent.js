@@ -5,13 +5,18 @@ class NavbarComponent extends React.Component {
   render() {
     return (
       <div className="navbar">
-        <div className="navbar-item"><HashLink smooth to="/#">Home</HashLink></div>
-        <div className="navbar-item"><HashLink smooth to="/#projects">Projects</HashLink></div>
-        <div className="navbar-item"><HashLink smooth to="/#experience">Experience</HashLink></div>
-        <div className="navbar-item"><HashLink smooth to="/#contact">Contact</HashLink></div>
+        <NavbarItem title="Home" link="/#" />
+        <NavbarItem title="About" link="/#about" />
+        <NavbarItem title="Projects" link="/#projects" />
+        <NavbarItem title="Experience" link="/#experience" />
+        <NavbarItem title="Contact" link="/#contact" />
       </div>
     )
   }
 }
+
+const NavbarItem = (props) => {
+  return <div className="navbar-item"><HashLink smooth to={props.link}>{props.title}</HashLink></div>;
+};
 
 export default NavbarComponent;
