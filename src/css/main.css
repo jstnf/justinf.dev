@@ -249,6 +249,46 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Montserrat";
+  color: whitesmoke;
+}
+
+.filter-selected-container {
+
+}
+
+.filter-etc-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.filter-button {
+  background-color: #333;
+  color: whitesmoke;
+  font-size: 0.8rem;
+  border: 2px solid purple;
+  border-radius: 15px;
+  padding: 5px 10px;
+  transition-duration: 400ms;
+}
+
+.filter-button:hover {
+  background-color: whitesmoke;
+  color: #333;
+}
+
+.filter-button-selected {
+  background-color: whitesmoke;
+  color: #333;
+  font-size: 0.8rem;
+  border: 2px solid purple;
+  border-radius: 15px;
+  padding: 5px 10px;
+  transition-duration: 400ms;
+}
+
+.project-thumbnail {
+  
 }
 /* ----- PROJECTS ----- */
 

@@ -1,18 +1,16 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 
-class NavbarComponent extends React.Component {
-  render() {
-    return (
-      <div className="navbar">
-        <NavbarItem title="Home" link="/#" />
-        <NavbarItem title="About" link="/#about" />
-        <NavbarItem title="Projects" link="/#projects" />
-        <NavbarItem title="Experience" link="/#experience" />
-        <NavbarItem title="Contact" link="/#contact" />
-      </div>
-    )
-  }
+export const NavbarComponent = () => {
+  return (
+    <div className="navbar">
+      <NavbarItem title="Home" link="/#" />
+      <NavbarItem title="About" link="/#about" />
+      <NavbarItem title="Projects" link="/#projects" />
+      <NavbarItem title="Experience" link="/#experience" />
+      <NavbarItem title="Contact" link="/#contact" />
+    </div>
+  )
 }
 
 const NavbarItem = (props) => {
