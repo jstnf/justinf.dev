@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        frutiger: "var(--font-frutiger)",
+        futuraBold: "var(--font-futura-bold)",
+      },
     },
   },
   plugins: [],

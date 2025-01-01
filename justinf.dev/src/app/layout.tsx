@@ -1,15 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const frutiger = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Frutiger.ttf",
+      weight: "400"
+    },
+    {
+      path: "../../public/fonts/Frutiger_bold.ttf",
+      weight: "700"
+    }
+  ],
+  variable: "--font-frutiger",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const futuraBold = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Futura_Bold.otf",
+      weight: "700"
+    }
+  ],
+  variable: "--font-futura-bold",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${frutiger.variable} ${futuraBold.variable} antialiased`}
       >
         {children}
       </body>
