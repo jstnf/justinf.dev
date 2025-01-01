@@ -1,3 +1,33 @@
+function MetroSign({
+  signProps
+}: Readonly<{
+  signProps: MetroSignProps
+}>) {
+  return (
+    <div className="flex flex-col items-center justify-center w-full text-center border p-4 rounded-2xl">
+      <div className="min-w-[275px] select-none">
+        <MetroSignStripe accentColor={signProps.accentColor}/>
+        <MetroSignEmblem signProps={signProps}/>
+        <MetroSignCity cityName={signProps.cityName}/>
+        <MetroSignStripe accentColor={signProps.accentColor}/>
+      </div>
+    </div>
+  )
+}
+
+type MetroSignProps = {
+  accentColor: string,
+  lineLetter: string,
+  stationNumber: string,
+  cityName: MetroSignCityName
+}
+
+type MetroSignCityName = {
+  kanji: string,
+  hiragana: string,
+  romaji: string
+}
+
 function MetroSignStripe({
   accentColor
 }: Readonly<{
@@ -14,15 +44,15 @@ function MetroSignStripe({
 }
 
 function MetroSignEmblem({
-  stationProps
+  signProps
 }: Readonly<{
-  stationProps: MetroSignStationProps
+  signProps: MetroSignProps
 }>) {
   return (
     <div
       className="flex items-center justify-center w-20 h-20 rounded-full border-8 mx-auto mt-3 mb-4"
       style={{
-        borderColor: stationProps.accentColor,
+        borderColor: signProps.accentColor,
       }}
     >
       <ul className="flex flex-col items-center justify-center text-center">
@@ -30,54 +60,31 @@ function MetroSignEmblem({
           className="text-xl font-semibold font-futuraBold"
           style={{lineHeight: 1.2}}
         >
-          {stationProps.lineLetter}
+          {signProps.lineLetter}
         </li>
         <li
           className="text-3xl font-bold font-futuraBold"
           style={{lineHeight: 1}}
         >
-          {stationProps.stationNumber}
+          {signProps.stationNumber}
         </li>
       </ul>
     </div>
   )
 }
 
-function MetroSign({
-  stationProps,
-  cityProps
+function MetroSignCity({
+  cityName
 }: Readonly<{
-  stationProps: MetroSignStationProps,
-  cityProps: MetroSignCityProps
+  cityName: MetroSignCityName
 }>) {
   return (
-    <div className="flex flex-col items-center justify-center w-full text-center border p-4 rounded-2xl">
-      <div className="min-w-[275px]">
-        <MetroSignStripe accentColor={stationProps.accentColor}/>
-        <MetroSignEmblem stationProps={stationProps}/>
-        <p className="text-5xl font-bold">{cityProps.kanji}</p>
-        <p className="text-lg font-bold">{cityProps.hiragana}</p>
-        <p
-          className="text-2xl font-bold"
-        >
-          {cityProps.romaji}
-        </p>
-        <MetroSignStripe accentColor={stationProps.accentColor}/>
-      </div>
-    </div>
+    <>
+      <p className="text-5xl font-bold">{cityName.kanji}</p>
+      <p className="text-lg font-bold">{cityName.hiragana}</p>
+      <p className="text-2xl font-bold">{cityName.romaji}</p>
+    </>
   )
 }
 
-type MetroSignStationProps = {
-  accentColor: string,
-  lineLetter: string,
-  stationNumber: string
-}
-
-type MetroSignCityProps = {
-  kanji: string,
-  hiragana: string,
-  romaji: string
-}
-
-export default MetroSign;
+export { MetroSign, type MetroSignProps };

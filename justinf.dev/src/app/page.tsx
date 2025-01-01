@@ -1,4 +1,5 @@
-import MetroSign from "@/components/MetroSign";
+import { MetroSign, MetroSignProps } from "@/components/MetroSign";
+import FloatingHeaderText from "@/components/FloatingHeaderText";
 
 export default function Home() {
   return (
@@ -16,44 +17,19 @@ function HomeContents() {
         <p>Works</p>
         <p>Contact</p>
       </header>
-      <main className="flex flex-row gap-8 row-start-2 items-center sm:items-start text-4xl">
-        <MetroSign
-          stationProps={{
-            accentColor: "purple",
-            lineLetter: "J",
-            stationNumber: "01"
-          }}
-          cityProps={{
-            kanji: "私について",
-            hiragana: "わたしについて",
-            romaji: "About me"
-          }}
-        />
-        <MetroSign
-          stationProps={{
-            accentColor: "purple",
-            lineLetter: "J",
-            stationNumber: "02"
-          }}
-          cityProps={{
-            kanji: "出来たこと",
-            hiragana: "できたこと",
-            romaji: "Past Work"
-          }}
-        />
-        <MetroSign
-          stationProps={{
-            accentColor: "purple",
-            lineLetter: "J",
-            stationNumber: "03"
-          }}
-          cityProps={{
-            kanji: "連絡",
-            hiragana: "れんらく",
-            romaji: "Contact"
-          }}
-        />
+
+      <main className="flex flex-col row-start-2 gap-16 justify-items-center items-center sm:items-start text-4xl">
+        <FloatingHeaderText title="Where to go?" subtitle="(click one)"/>
+        <div className="flex flex-row gap-8">
+          {signs.map((sign, index) => (
+            <MetroSign
+              key={index}
+              signProps={sign}
+            />
+          ))}
+        </div>
       </main>
+
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center border">
         <h1>This is h1.</h1>
         <h2>This is h2.</h2>
@@ -63,3 +39,36 @@ function HomeContents() {
     </div>
   );
 }
+
+const signs: MetroSignProps[] = [
+  {
+    accentColor: "purple",
+    lineLetter: "J",
+    stationNumber: "01",
+    cityName: {
+      kanji: "私について",
+      hiragana: "わたしについて",
+      romaji: "About me"
+    }
+  },
+  {
+    accentColor: "purple",
+    lineLetter: "J",
+    stationNumber: "02",
+    cityName: {
+      kanji: "出来たこと",
+      hiragana: "できたこと",
+      romaji: "Past Work"
+    }
+  },
+  {
+    accentColor: "purple",
+    lineLetter: "J",
+    stationNumber: "03",
+    cityName: {
+      kanji: "連絡",
+      hiragana: "れんらく",
+      romaji: "Contact"
+    }
+  }
+]
