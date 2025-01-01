@@ -7,8 +7,8 @@ export default function FloatingHeaderText({
 }>) {
   return (
     <div className="flex flex-col w-full items-center">
-      <p className="text-6xl">{title}</p>
-      <p className="text-xl">{subtitle}</p>
+      <p className="text-6xl font-frutiger font-bold">{title}</p>
+      <p className="text-xl font-frutiger">{subtitle}</p>
     </div>
   )
 }

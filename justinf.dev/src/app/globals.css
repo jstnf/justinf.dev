@@ -19,3 +19,9 @@ body {
   background: var(--background);
   font-family: "Frutiger", sans-serif;
 }
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
