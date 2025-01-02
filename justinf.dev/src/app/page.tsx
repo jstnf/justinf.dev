@@ -1,5 +1,9 @@
+"use client";
+
 import { MetroSign, MetroSignProps } from "@/components/MetroSign";
 import FloatingHeaderText from "@/components/FloatingHeaderText";
+import React from "react";
+import { animated } from "@react-spring/web";
 
 export default function Home() {
   return (
@@ -10,6 +14,8 @@ export default function Home() {
 }
 
 function HomeContents() {
+  const [highlighted, setHighlighted] = React.useState<number | null>(null);
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] border">
       <header className="row-start-1 flex gap-6 items-center justify-center border">
@@ -22,10 +28,18 @@ function HomeContents() {
         <FloatingHeaderText title="Where to go?" subtitle="(click one)"/>
         <div className="flex flex-row gap-8">
           {signs.map((sign, index) => (
-            <MetroSign
+            <animated.div
               key={index}
-              signProps={sign}
-            />
+              style={{
+                opacity: highlighted === null || highlighted === index ? 1 : 0.6,
+                transform: highlighted === null ? 'scale(1)' : (highlighted === index ? 'scale(1.1)' : 'scale(0.9)'),
+                transition: 'opacity 0.3s, transform 0.3s',
+              }}
+              onMouseEnter={() => setHighlighted(index)}
+              onMouseLeave={() => setHighlighted(null)}
+            >
+              <MetroSign signProps={sign}/>
+            </animated.div>
           ))}
         </div>
       </main>
@@ -65,6 +79,16 @@ const signs: MetroSignProps[] = [
     accentColor: "purple",
     lineLetter: "J",
     stationNumber: "03",
+    cityName: {
+      kanji: "ブログ",
+      hiragana: "ブログ",
+      romaji: "Blog"
+    }
+  },
+  {
+    accentColor: "purple",
+    lineLetter: "J",
+    stationNumber: "04",
     cityName: {
       kanji: "連絡",
       hiragana: "れんらく",
