@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import MetroStandaloneEmblem from "@/components/MetroStandaloneEmblem";
 
 export const metadata: Metadata = {
   title: "justinf.dev - Contact",
@@ -9,6 +10,7 @@ export default function ContactPage() {
   return (
     <div>
       <h1>Contact</h1>
+      <MetroStandaloneEmblem accentColor="purple" letter="J" viewTransitionName="logo"/>
     </div>
   )
 }

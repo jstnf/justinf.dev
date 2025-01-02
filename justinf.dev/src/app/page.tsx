@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen py-20 pb-16 gap-16 font-frutiger">
       <header className="row-start-1 flex gap-6 items-center justify-center">
-        <MetroStandaloneEmblem accentColor="purple" letter="J"/>
+        <MetroStandaloneEmblem accentColor="purple" letter="J" viewTransitionName="logo"/>
       </header>
 
       <main className="flex flex-col row-start-2 gap-10 justify-items-center items-center sm:items-start text-4xl max-w-[100vw]">
