@@ -11,7 +11,7 @@ export default function MetroStandaloneEmblem({
 }>) {
   return (
     <div
-      className="flex items-center justify-center w-20 h-20 rounded-full border-[16px] mx-auto mt-3 mb-4 select-none"
+      className="flex items-center justify-center w-20 h-20 rounded-full border-[16px] mx-auto mt-3 mb-4 select-none bg-white text-black"
       style={{
         borderColor: accentColor,
         transform: `scale(${scalar})`,
