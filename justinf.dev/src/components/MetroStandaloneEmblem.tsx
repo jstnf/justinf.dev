@@ -2,12 +2,12 @@ export default function MetroStandaloneEmblem({
   accentColor,
   letter,
   scalar = 1,
-  viewTransitionName = undefined
+  viewTransitionName = undefined,
 }: Readonly<{
-  accentColor: string,
-  letter: string,
-  scalar?: number,
-  viewTransitionName?: string | undefined
+  accentColor: string;
+  letter: string;
+  scalar?: number;
+  viewTransitionName?: string | undefined;
 }>) {
   return (
     <div
@@ -15,17 +15,17 @@ export default function MetroStandaloneEmblem({
       style={{
         borderColor: accentColor,
         transform: `scale(${scalar})`,
-        viewTransitionName: viewTransitionName
+        viewTransitionName: viewTransitionName,
       }}
     >
       <ul className="flex flex-col items-center justify-center text-center">
         <li
           className="absolute translate-y-0.5 text-3xl font-semibold font-futuraBold"
-          style={{lineHeight: 0}}
+          style={{ lineHeight: 0 }}
         >
           {letter}
         </li>
       </ul>
     </div>
-  )
+  );
 }

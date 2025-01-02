@@ -1,7 +1,7 @@
 import React from "react";
 
 import FloatingHeaderText from "@/components/FloatingHeaderText";
-import type {MetroSignProps} from "@/components/MetroSign";
+import type { MetroSignProps } from "@/components/MetroSign";
 import MetroSignCarousel from "@/components/MetroSignCarousel";
 import MetroStandaloneEmblem from "@/components/MetroStandaloneEmblem";
 
@@ -9,14 +9,18 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen py-20 pb-16 gap-16 font-frutiger">
       <header className="row-start-1 flex gap-6 items-center justify-center">
-        <MetroStandaloneEmblem accentColor="purple" letter="J" viewTransitionName="logo"/>
+        <MetroStandaloneEmblem
+          accentColor="purple"
+          letter="J"
+          viewTransitionName="logo"
+        />
       </header>
 
       <main className="flex flex-col row-start-2 gap-10 justify-items-center items-center sm:items-start text-4xl max-w-[100vw]">
         <div className="w-full">
-          <FloatingHeaderText title="Where to go?" subtitle="(click one)"/>
+          <FloatingHeaderText title="Where to go?" subtitle="(click one)" />
         </div>
-        <MetroSignCarousel signs={signs}/>
+        <MetroSignCarousel signs={signs} />
       </main>
 
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
@@ -34,9 +38,9 @@ const signs: (MetroSignProps & { href: string })[] = [
     cityName: {
       kanji: "私について",
       hiragana: "わたしについて",
-      romaji: "About me"
+      romaji: "About me",
     },
-    href: "/about"
+    href: "/about",
   },
   {
     accentColor: "purple",
@@ -45,9 +49,9 @@ const signs: (MetroSignProps & { href: string })[] = [
     cityName: {
       kanji: "出来たこと",
       hiragana: "できたこと",
-      romaji: "Past Work"
+      romaji: "Past Work",
     },
-    href: "/works"
+    href: "/works",
   },
   {
     accentColor: "purple",
@@ -56,9 +60,9 @@ const signs: (MetroSignProps & { href: string })[] = [
     cityName: {
       kanji: "ブログ",
       hiragana: "ぶろぐ",
-      romaji: "Blog"
+      romaji: "Blog",
     },
-    href: "/blog"
+    href: "/blog",
   },
   {
     accentColor: "purple",
@@ -67,8 +71,8 @@ const signs: (MetroSignProps & { href: string })[] = [
     cityName: {
       kanji: "連絡",
       hiragana: "れんらく",
-      romaji: "Contact"
+      romaji: "Contact",
     },
-    href: "/contact"
-  }
-]
+    href: "/contact",
+  },
+];

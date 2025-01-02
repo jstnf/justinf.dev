@@ -9,12 +9,12 @@ const frutiger = localFont({
   src: [
     {
       path: "../../public/fonts/Frutiger.ttf",
-      weight: "400"
+      weight: "400",
     },
     {
       path: "../../public/fonts/Frutiger_bold.ttf",
-      weight: "700"
-    }
+      weight: "700",
+    },
   ],
   variable: "--font-frutiger",
 });
@@ -23,8 +23,8 @@ const futuraBold = localFont({
   src: [
     {
       path: "../../public/fonts/Futura_Bold.otf",
-      weight: "700"
-    }
+      weight: "700",
+    },
   ],
   variable: "--font-futura-bold",
 });

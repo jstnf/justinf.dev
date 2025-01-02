@@ -1,37 +1,37 @@
 function MetroSign({
-  signProps
+  signProps,
 }: Readonly<{
-  signProps: MetroSignProps
+  signProps: MetroSignProps;
 }>) {
   return (
     <div className="flex flex-col items-center justify-center w-full text-center border-2 p-4 rounded-2xl bg-white text-black">
       <div className="min-w-[275px] select-none">
-        <MetroSignStripe accentColor={signProps.accentColor}/>
-        <MetroSignEmblem signProps={signProps}/>
-        <MetroSignCity cityName={signProps.cityName}/>
-        <MetroSignStripe accentColor={signProps.accentColor}/>
+        <MetroSignStripe accentColor={signProps.accentColor} />
+        <MetroSignEmblem signProps={signProps} />
+        <MetroSignCity cityName={signProps.cityName} />
+        <MetroSignStripe accentColor={signProps.accentColor} />
       </div>
     </div>
-  )
+  );
 }
 
 type MetroSignProps = {
-  accentColor: string,
-  lineLetter: string,
-  stationNumber: string,
-  cityName: MetroSignCityName
-}
+  accentColor: string;
+  lineLetter: string;
+  stationNumber: string;
+  cityName: MetroSignCityName;
+};
 
 type MetroSignCityName = {
-  kanji: string,
-  hiragana: string,
-  romaji: string
-}
+  kanji: string;
+  hiragana: string;
+  romaji: string;
+};
 
 function MetroSignStripe({
-  accentColor
+  accentColor,
 }: Readonly<{
-  accentColor: string
+  accentColor: string;
 }>) {
   return (
     <div
@@ -40,13 +40,13 @@ function MetroSignStripe({
         backgroundColor: accentColor,
       }}
     />
-  )
+  );
 }
 
 function MetroSignEmblem({
-  signProps
+  signProps,
 }: Readonly<{
-  signProps: MetroSignProps
+  signProps: MetroSignProps;
 }>) {
   return (
     <div
@@ -58,25 +58,25 @@ function MetroSignEmblem({
       <ul className="flex flex-col items-center justify-center text-center">
         <li
           className="text-xl font-semibold font-futuraBold"
-          style={{lineHeight: 1.2}}
+          style={{ lineHeight: 1.2 }}
         >
           {signProps.lineLetter}
         </li>
         <li
           className="text-3xl font-bold font-futuraBold"
-          style={{lineHeight: 1}}
+          style={{ lineHeight: 1 }}
         >
           {signProps.stationNumber}
         </li>
       </ul>
     </div>
-  )
+  );
 }
 
 function MetroSignCity({
-  cityName
+  cityName,
 }: Readonly<{
-  cityName: MetroSignCityName
+  cityName: MetroSignCityName;
 }>) {
   return (
     <>
@@ -84,7 +84,7 @@ function MetroSignCity({
       <p className="text-lg font-bold">{cityName.hiragana}</p>
       <p className="text-2xl font-bold">{cityName.romaji}</p>
     </>
-  )
+  );
 }
 
 export { MetroSign, type MetroSignProps };
