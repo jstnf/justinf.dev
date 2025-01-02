@@ -16,7 +16,7 @@ export default function Home() {
         />
       </header>
 
-      <main className="flex flex-col row-start-2 gap-10 justify-items-center items-center sm:items-start text-4xl max-w-[100vw]">
+      <main className="flex flex-col row-start-2 gap-10 justify-items-center items-center sm:items-start max-w-[100vw]">
         <div className="w-full">
           <FloatingHeaderText title="Where to go?" subtitle="(click one)" />
         </div>
