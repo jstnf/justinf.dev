@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+
 import MetroStandaloneEmblem from "@/components/MetroStandaloneEmblem";
 
 export const metadata: Metadata = {

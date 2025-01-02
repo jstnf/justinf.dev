@@ -1,7 +1,11 @@
+"use client";
+
+import React from "react";
+
 import {animated, useSpring} from "@react-spring/web";
 import {Link} from "next-view-transitions";
+
 import {MetroSign, MetroSignProps} from "@/components/MetroSign";
-import React from "react";
 
 export default function MetroSignCarousel({
   signs

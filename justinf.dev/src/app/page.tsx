@@ -1,10 +1,9 @@
-"use client";
-
 import React from "react";
+
 import FloatingHeaderText from "@/components/FloatingHeaderText";
+import type {MetroSignProps} from "@/components/MetroSign";
 import MetroSignCarousel from "@/components/MetroSignCarousel";
 import MetroStandaloneEmblem from "@/components/MetroStandaloneEmblem";
-import type {MetroSignProps} from "@/components/MetroSign";
 
 export default function Home() {
   return (
