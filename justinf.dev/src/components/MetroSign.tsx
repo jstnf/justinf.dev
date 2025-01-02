@@ -4,7 +4,7 @@ function MetroSign({
   signProps: MetroSignProps
 }>) {
   return (
-    <div className="flex flex-col items-center justify-center w-full text-center border p-4 rounded-2xl">
+    <div className="flex flex-col items-center justify-center w-full text-center border p-4 rounded-2xl bg-white text-black">
       <div className="min-w-[275px] select-none">
         <MetroSignStripe accentColor={signProps.accentColor}/>
         <MetroSignEmblem signProps={signProps}/>
