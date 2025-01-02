@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript", "plugin:import/recommended"],
+  "extends": ["next/core-web-vitals", "next/typescript", "plugin:import/recommended", "plugin:prettier/recommended"],
   "rules": {
     "import/order": [
       "error",
