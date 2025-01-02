@@ -81,7 +81,7 @@ const signs: MetroSignProps[] = [
     stationNumber: "03",
     cityName: {
       kanji: "ブログ",
-      hiragana: "ブログ",
+      hiragana: "ぶろぐ",
       romaji: "Blog"
     }
   },
