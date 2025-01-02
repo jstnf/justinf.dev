@@ -25,9 +25,15 @@ export default function FloatingHeaderText({
   });
 
   return (
-    <animated.div style={spring} className={`flex flex-col w-full items-center ${canSelect ? '' : "select-none"}`}>
-      <p className="text-6xl font-frutiger">{title}</p>
-      <p className="text-xl font-frutiger">{subtitle}</p>
+    <animated.div
+      className="flex flex-col items-center"
+      style={{
+        ...spring,
+        userSelect: canSelect ? "auto" : "none",
+      }}
+    >
+      <p className="text-4xl sm:text-6xl">{title}</p>
+      <p className="text-lg sm:text-xl">{subtitle}</p>
     </animated.div>
   )
 }

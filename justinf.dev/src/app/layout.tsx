@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import { ViewTransitions } from "next-view-transitions";
 
 const frutiger = localFont({
   src: [
@@ -38,11 +39,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${frutiger.variable} ${futuraBold.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <ViewTransitions>
+        <body
+          className={`${frutiger.variable} ${futuraBold.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </ViewTransitions>
     </html>
   );
 }
