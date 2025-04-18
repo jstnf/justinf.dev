@@ -11,21 +11,14 @@ export default function MetroStandaloneEmblem({
 }>) {
   return (
     <div
-      className="flex items-center justify-center w-20 h-20 rounded-full border-[16px] mx-auto mt-3 mb-4 select-none bg-white text-black"
+      className="flex h-20 w-20 select-none items-center justify-center rounded-full border-[16px] bg-white text-black"
       style={{
         borderColor: accentColor,
         transform: `scale(${scalar})`,
         viewTransitionName: viewTransitionName,
       }}
     >
-      <ul className="flex flex-col items-center justify-center text-center">
-        <li
-          className="absolute translate-y-0.5 text-3xl font-semibold font-futuraBold"
-          style={{ lineHeight: 0 }}
-        >
-          {letter}
-        </li>
-      </ul>
+      <p className="translate-y-0.5 font-futuraBold text-4xl">{letter}</p>
     </div>
   );
 }

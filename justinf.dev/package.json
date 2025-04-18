@@ -25,8 +25,12 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.1",
     "postcss": "^8",
-    "prettier": "3.4.2",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "prettier": {
+    "plugins": ["prettier-plugin-tailwindcss"]
   }
 }
