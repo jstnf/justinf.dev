@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Link } from "next-view-transitions";
 
 import MetroStandaloneEmblem from "@/components/MetroStandaloneEmblem";
 
@@ -9,13 +10,15 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div>
+    <div className="font-frutiger">
       <h1>Blog</h1>
-      <MetroStandaloneEmblem
-        accentColor="purple"
-        letter="J"
-        viewTransitionName="logo"
-      />
+      <Link href="/">
+        <MetroStandaloneEmblem
+          accentColor="purple"
+          letter="J"
+          viewTransitionName="logo"
+        />
+      </Link>
     </div>
   );
 }

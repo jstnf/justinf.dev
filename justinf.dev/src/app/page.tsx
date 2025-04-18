@@ -1,14 +1,14 @@
 import React from "react";
 
+import MetroSignCarousel from "@/components/carousel/MetroSignCarousel";
 import FloatingHeaderText from "@/components/FloatingHeaderText";
 import type { MetroSignProps } from "@/components/MetroSign";
-import MetroSignCarousel from "@/components/MetroSignCarousel";
 import MetroStandaloneEmblem from "@/components/MetroStandaloneEmblem";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen py-20 pb-16 gap-16 font-frutiger">
-      <header className="row-start-1 flex gap-6 items-center justify-center">
+    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 py-20 pb-16 font-frutiger">
+      <header className="row-start-1 flex items-center justify-center gap-6">
         <MetroStandaloneEmblem
           accentColor="purple"
           letter="J"
@@ -16,14 +16,14 @@ export default function Home() {
         />
       </header>
 
-      <main className="flex flex-col row-start-2 gap-10 justify-items-center items-center sm:items-start max-w-[100vw]">
+      <main className="row-start-2 flex max-w-[100vw] flex-col items-center justify-items-center gap-10 sm:items-start">
         <div className="w-full">
           <FloatingHeaderText title="Where to go?" subtitle="(click one)" />
         </div>
         <MetroSignCarousel signs={signs} />
       </main>
 
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
         <p className="text-xs opacity-20">© 2025 - All rights reserved.</p>
       </footer>
     </div>
