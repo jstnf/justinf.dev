@@ -2,17 +2,9 @@
 
 import React from "react";
 
-import { type AnimatedComponent, animated, useSpring } from "@react-spring/web";
+import { animated, useSpring } from "@react-spring/web";
 
-// @react-spring/web v9 types map `children` through AnimatedProp<ReactNode> which
-// resolves to `never` under React 19's revised types. This cast re-exposes `children`
-// on the component type without losing SpringValue support on `style`. Will be removed
-// when @react-spring/web is upgraded to v10 in Task 4.
-const AnimatedDiv = animated.div as unknown as AnimatedComponent<"div"> & {
-  (
-    props: React.ComponentPropsWithRef<"div"> & { children?: React.ReactNode },
-  ): React.ReactElement | null;
-};
+const AnimatedDiv = animated.div;
 
 export default function FloatingHeaderText({
   title,
