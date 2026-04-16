@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@react-spring/web": "^9.7.5",
-    "next": "14.2.22",
+    "next": "14.2.35",
     "next-view-transitions": "^0.3.4",
     "react": "^18",
     "react-dom": "^18"
@@ -20,7 +20,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.22",
+    "eslint-config-next": "14.2.35",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.1",
