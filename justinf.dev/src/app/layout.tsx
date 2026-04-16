@@ -16,7 +16,7 @@ const frutiger = localFont({
       weight: "700",
     },
   ],
-  variable: "--font-frutiger",
+  variable: "--font-frutiger-src",
 });
 
 const futuraBold = localFont({
@@ -26,7 +26,7 @@ const futuraBold = localFont({
       weight: "700",
     },
   ],
-  variable: "--font-futura-bold",
+  variable: "--font-futura-bold-src",
 });
 
 export const metadata: Metadata = {

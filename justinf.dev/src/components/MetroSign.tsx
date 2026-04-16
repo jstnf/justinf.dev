@@ -50,20 +50,20 @@ function MetroSignEmblem({
 }>) {
   return (
     <div
-      className="mx-auto mb-4 mt-3 flex h-20 w-20 items-center justify-center rounded-full border-8"
+      className="mx-auto mt-3 mb-4 flex h-20 w-20 items-center justify-center rounded-full border-8"
       style={{
         borderColor: signProps.accentColor,
       }}
     >
       <ul className="flex flex-col items-center justify-center text-center">
         <li
-          className="font-futuraBold text-2xl font-semibold"
+          className="font-futura-bold text-2xl font-semibold"
           style={{ lineHeight: 1.2 }}
         >
           {signProps.lineLetter}
         </li>
         <li
-          className="font-futuraBold text-3xl font-bold"
+          className="font-futura-bold text-3xl font-bold"
           style={{ lineHeight: 0.8 }}
         >
           {signProps.stationNumber}

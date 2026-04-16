@@ -7,7 +7,7 @@ import MetroStandaloneEmblem from "@/components/MetroStandaloneEmblem";
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 py-20 pb-16 font-frutiger">
+    <div className="font-frutiger grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 py-20 pb-16">
       <header className="row-start-1 flex items-center justify-center gap-6">
         <MetroStandaloneEmblem
           accentColor="purple"

@@ -1,6 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-frutiger: var(--font-frutiger-src, sans-serif);
+  --font-futura-bold: var(--font-futura-bold-src, sans-serif);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
 
 :root {
   --background: #ffffff;
@@ -17,7 +22,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Frutiger", sans-serif;
+  font-family: var(--font-frutiger), sans-serif;
   overflow-x: hidden;
   max-width: 100vw;
 }
@@ -29,8 +34,8 @@ body {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @layer utilities {

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function WorksPage() {
   return (
-    <div className="flex items-center gap-4 bg-stone-900 p-4 font-frutiger">
+    <div className="font-frutiger flex items-center gap-4 bg-stone-900 p-4">
       <Link href="/">
         <MetroStandaloneEmblem
           accentColor="purple"
