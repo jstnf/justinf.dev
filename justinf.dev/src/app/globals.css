@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-@theme {
-  --font-frutiger: var(--font-frutiger-src, sans-serif);
-  --font-futura-bold: var(--font-futura-bold-src, sans-serif);
+@theme inline {
+  --font-frutiger: var(--font-frutiger-src);
+  --font-futura-bold: var(--font-futura-bold-src);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 }
