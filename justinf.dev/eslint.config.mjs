@@ -1,22 +1,22 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-import { FlatCompat } from "@eslint/eslintrc";
+import { defineConfig, globalIgnores } from "eslint/config";
 import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
 import nextTypescript from "eslint-config-next/typescript";
+import { importX } from "eslint-plugin-import-x";
+import prettierRecommended from "eslint-plugin-prettier/recommended";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({ baseDirectory: __dirname });
-
-export default [
+export default defineConfig([
   ...nextCoreWebVitals,
   ...nextTypescript,
-  ...compat.extends("plugin:prettier/recommended"),
+  prettierRecommended,
+  globalIgnores([".next/**", "out/**", "next-env.d.ts"]),
   {
+    // eslint-plugin-import (bundled by eslint-config-next) crashes on ESLint 10,
+    // so its rules are swapped for their eslint-plugin-import-x equivalents.
+    plugins: { "import-x": importX },
     rules: {
-      "import/order": [
+      "import/no-anonymous-default-export": "off",
+      "import-x/no-anonymous-default-export": "warn",
+      "import-x/order": [
         "error",
         {
           groups: ["builtin", "external", "internal"],
@@ -30,4 +30,4 @@ export default [
       ],
     },
   },
-];
+]);

@@ -18,7 +18,7 @@ export default function MetroStandaloneEmblem({
         viewTransitionName: viewTransitionName,
       }}
     >
-      <p className="font-futura-bold translate-y-0.5 text-4xl">{letter}</p>
+      <p className="translate-y-0.5 font-futura-bold text-4xl">{letter}</p>
     </div>
   );
 }
